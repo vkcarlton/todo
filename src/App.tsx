@@ -5,7 +5,7 @@ interface Todo {
   text: string;
   completed: boolean;
 }
-
+//test
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [newTodo, setNewTodo] = useState<string>('');
