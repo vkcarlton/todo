@@ -1,6 +1,21 @@
 import React, { useState } from 'react';
 
-function TodoItem(props) {
+interface Todo {
+  id: number;
+  text: string;
+  completed: boolean;
+}
+
+// Define the props for the TodoItem component
+interface TodoItemProps {
+  todo: Todo;
+  toggleComplete: (id: number) => void;
+  updateTask: (id: number, newText: string) => void;
+  deleteTodo: (id: number) => void;
+}
+
+
+const TodoItem: React.FC<TodoItemProps> = (props) => {
 
   const [modifyTask, setModifyTask] = useState(false);
 

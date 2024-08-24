@@ -74,7 +74,7 @@ const App: React.FC = () => {
           <TodoItem
             key={todo.id}
             todo={todo}
-            updateTodo={updateTodo}
+            updateTask={updateTodo}
             deleteTodo={deleteTodo}
             toggleComplete={toggleComplete}
           />

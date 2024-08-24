@@ -1,7 +1,9 @@
-FROM node 
+FROM node:22-alpine3.19
 WORKDIR /app
 COPY package.json .
-RUN npm install
+COPY package-lock.json .
+RUN npm install --verbose
 COPY . .
-EXPOSE 5173
-CMD ["npm", "run", "dev" ]
+RUN npm run build
+EXPOSE 4173
+CMD ["npm", "run", "preview" ]
