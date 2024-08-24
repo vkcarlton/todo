@@ -1,7 +1,18 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "es6", // Specifies ECMAScript target version
+    "module": "commonjs", // Specifies module code generation
+    "jsx": "react-jsx", // Enables JSX support for React 17+ with the new JSX transform
+    "strict": true, // Enables all strict type-checking options
+    "esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules
+    "skipLibCheck": true, // Skips type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Ensures consistent casing in file names
+    "outDir": "./dist", // Redirects output structure to the directory
+    "baseUrl": "./src", // Base directory for resolving non-relative module names
+    "paths": {
+      "@/*": ["*"]
+    }
+  },
+  "include": ["src/**/*"], // Includes all files in the src directory
+  "exclude": ["node_modules", "dist"] // Excludes these directories from compilation
 }
